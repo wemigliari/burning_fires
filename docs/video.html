@@ -1,0 +1,71 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta charset = "UTF-8" name = "viewport" content = "width = device-width, initial-scale = 0.5">
+
+        <title></title>
+          <style>
+            select, p {
+              font: 1em arial;
+                  }
+          </style>
+
+  </head>
+
+<body>
+    <div class="box">
+    <h2>Videos</h2>
+    <p>This section has a list of videos on wildfires. Select one of them from the following menu to see it.</p>
+
+
+    <label for="area"></label>
+
+      <select id="selectbox" name="" onchange="javascript:location.href = this.value;">
+        <option value="" selected>--Select a video--</option>
+        <option value="https://www.youtube.com/watch?v=C8mhGBzPK50&ab_channel=NASAGoddard">NASA | Ten Years of Global Fire Observations</option>
+        <option value="https://www.youtube.com/watch?v=KFl97nfVMFc&ab_channel=NASAGoddard">NASA | How Arctic Fires Change the World</option>
+        <option value="https://www.youtube.com/watch?v=dCFyYIcGL_w&ab_channel=NASAGoddard">NASA | Wildfires and Pine Beetles</option>
+        <option value="https://www.youtube.com/watch?v=V2vGgUOBC8M&ab_channel=NASAScientificVisualizationStudio">NASA | Boreal Forest Fire Observations and MODIS NDVI</option>
+      </select>
+  </div>
+
+  <div class="bgg-img">
+    <footer id="footer" class="color color-secondary short">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12 center">
+           <footer class = "footer_text"> <small>The Bobcat fire burning in the Angeles National Forest in California earlier this month KYLE GRILLOT/AFP VIA GETTY IMAGES &copy; Copyright 2020</small> </footer>
+         </div>
+       </div>
+      </div>
+   </footer>
+  </div>
+</body>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+<script>
+    let selectText = (ele) => {
+      let msg = document.getElementById('msg');
+        msg.innerHTML = 'Selected Text: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+            'Value of the Selected Text: <b>' + ele.value + '</b>';
+    }
+</script>
+
+</html>

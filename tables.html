@@ -1,0 +1,85 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta charset = "UTF-8" name = "viewport" content = "width = device-width, initial-scale = 0.5">
+
+        <title></title>
+          <style>
+            select, p {
+              font: 1em arial;
+                  }
+          </style>
+
+  </head>
+
+<body>
+
+    <div class="box">
+    <h2>Tables on Carbon Emissions</h2>
+    <p>This section has a list of Excel tables on wildfires. Select one of them from the following menu to download it.
+      The tables have been extracted from the <a href="https://globalfiredata.org/pages/data/" style="color:steelblue">Global Fire Data</a>.</p>
+
+
+    <label for="area"></label>
+
+      <select id="selectbox" name="" onchange="javascript:location.href = this.value;">
+        <option value="" selected>--Select a table--</option>
+        <option value="table1.htm">BC emissions estimates in 1E9 g BC for the globe</option>
+        <option value="">C emissions estimates in 1E12 g C for the globe</option>
+        <option value="">C2H2 emissions estimates in 1E9 g C2H2 for the globe</option>
+        <option value="">C2H4 emissions estimates in 1E9 g C2H4 for the globe</option>
+        <option value="">C2H4O emissions estimates in 1E9 g C2H4O for the globe</option>
+        <option value="">C2H5OH emissions estimates in 1E8 g C2H5OH for the globe</option>
+        <option value="">C2H4O emissions estimates in 1E9 g C2H4O for the globe</option>
+        <option value="">C2H6 emissions estimates in 1E9 g C2H6 for the globe</option>
+        <option value="">C3H6 emissions estimates in 1E9 g C3H6 for the globe</option>
+        <option value="">C3H6O emissions estimates in 1E9 g C3H6O for the globe</option>
+        <option value="">C3H8 emissions estimates in 1E8 g C3H8 for the globe</option>
+        <option value="">C5H8 emissions estimates in 1E9 g C5H8 for the globe</option>
+        <option value="">C6H6 emissions estimates in 1E9 g C6H6 for the globe</option>
+        <option value="">C7H8 emissions estimates in 1E9 g C7H8 for the globe</option>
+        <option value="">C8H10 emissions estimates in 1E8 g C8H10 for the globe</option>
+      </select>
+  </div>
+
+
+<div class="bgg-img">
+  <footer id="footer" class="color color-secondary short">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12 center">
+         <footer class = "footer_text"> <small>The Bobcat fire burning in the Angeles National Forest in California earlier this month KYLE GRILLOT/AFP VIA GETTY IMAGES &copy; Copyright 2020</small> </footer>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+</body>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+<script>
+    let selectText = (ele) => {
+      let msg = document.getElementById('msg');
+        msg.innerHTML = 'Selected Text: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+            'Value of the Selected Text: <b>' + ele.value + '</b>';
+    }
+</script>
+
+</html>

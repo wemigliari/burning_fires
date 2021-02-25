@@ -1,0 +1,89 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta charset = "UTF-8" name = "viewport" content = "width = device-width, initial-scale = 0.5">
+
+        <title></title>
+          <style>
+            select, p {
+              font: 1em arial;
+                  }
+          </style>
+
+  </head>
+
+<body>
+
+    <div class="box">
+    <h2>Figures on Wildfires</h2>
+    <p>This section has a list of graphs and tables on wildfires. Select one of them from the following menu to see it.
+    The data have been extracted from the <a href="https://globalfiredata.org/pages/data/" style="color:steelblue" target="_blank">Global Fire Data</a>.</p>
+
+
+    <label for="area"></label>
+
+    <form onsubmit="this.action = document.getElementById('filename').value">
+    <select id="filename">
+        <option value="images/bc_emissions1.eps">EPS - BC emissions estimates in 1E9 g BC for the globe, different regions, and different fire</option>
+        <option value="images/bc_emissions1.pdf">PDF - BC emissions estimates in 1E9 g BC for the globe, different regions, and different fire</option>
+        <option value="excel/bc_emissions.xlsx">EXCEL - BC emissions estimates in 1E9 g BC for the globe, different regions, and different fire</option>
+    </select>
+    <input type="submit" value="Download" class="grey-btn" />
+</form>
+
+  </div>
+
+  </div>
+
+<div class="bgg-img">
+  <footer id="footer" class="color color-secondary short">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12 center">
+         <footer class = "footer_text"> <small>The Bobcat fire burning in the Angeles National Forest in California earlier this month KYLE GRILLOT/AFP VIA GETTY IMAGES &copy; Copyright 2020</small> </footer>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+</body>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+<script>
+    let selectText = (ele) => {
+      let msg = document.getElementById('msg');
+        msg.innerHTML = 'Selected Text: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+            'Value of the Selected Text: <b>' + ele.value + '</b>';
+    }
+</script>
+
+
+<script type="text/javascript">
+
+  function download() {
+      //get the filename from the selected item
+      var sel = document.forms[0].files[document.forms[0].files.selectedIndex].value;
+      //redirect to this file
+      document.location = sel;
+  }
+
+</script>
+
+</html>

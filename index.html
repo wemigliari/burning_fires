@@ -1,0 +1,121 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta charset = "UTF-8" name = "viewport" content = "width = device-width, initial-scale = 0.5">
+
+        <style>
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.content {
+  float: right;
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  float: right;
+  width: 170px;
+  font-size: 18px;
+  padding: 10px 10px 10px 10px;
+  margin-right: 40px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+
+    </head>
+
+<body>
+  <div class="bg-img">
+    <div class="bg-banner">
+    </div>
+    <div class="container">
+  <video autoplay muted loop id="myVideo">
+    <source src="images/fire.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="content">
+    <h1></h1>
+      <p>NASA | Ten Years of Global Fire Observations</p>
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+  </div>
+    <!--<div class="bg-banner"></div>-->
+  <nav>
+    <div class="nav">
+      <ul>
+        <li> <a class="active" href="https://www.ncl.ac.uk/gps/staff/profile/lorenzafontana.html#background" target="_blank">HOME<em></em></a></li>
+              <div class="dropdown">
+              <button class="dropbtn">DATA<em></em>
+                  <i class="fa fa-fw fa-database"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="https://rpubs.com/wemigliari/wildfires" target="_blank">Interactive Data</a>
+                <a href="figures.html" target="_blank">Figures</a>
+                <a href="contacts.html" target="_blank">Maps</a>
+                <a href="tables.html" target="_blank">Tables</a>
+                <a href="contacts.html" target="_blank">QGIS</a>
+                <a href="concerts.html" target="_blank">Database</a>
+                <a href="video.html" target="_blank">Videos</a>
+                <a href="research.html" target="_blank">Research</a>
+              </div>
+              </div>
+              <div class="topnav-right">
+              <li><a class="active" href="https://www.linkedin.com/in/wellington-migliari-51773a70/" target="_blank"><i class="fa fa-1x fab fa-linkedin"></i></a></li>
+              <li><a class="active" href="https://github.com/wemigliari/burning_forests" target="_blank"><i class="fa fa-1x fab fa-github"></i></a></li>
+            </div>
+      </ul>
+   </div>
+  </nav>
+
+  <footer id="footer" class="color color-secondary short">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12 center">
+         <footer class = "footer_text"> <small> W. Migliari (2021) &copy; Copyright 2021</small> </footer>
+       </div>
+     </div>
+    </div>
+ </footer>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+</script>
+
+</div>
+</body>
+</html>
